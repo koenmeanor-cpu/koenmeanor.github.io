@@ -1,183 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Dynamic Sound Attenuator | Koen Meanor</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
     <nav>
         <a href="index.html" class="logo">Koen Meanor</a>
-
         <div class="nav-links">
             <a href="index.html#projects">Projects</a>
             <a href="index.html#about">About</a>
             <a href="#">Resume</a>
         </div>
     </nav>
-
-
     <main class="project-page">
-
-        <a href="index.html#projects" class="back-link">
-            ← Back to Projects
-        </a>
-
-
+        <a href="index.html#projects" class="back-link">← Back to Projects</a>
         <section class="project-header">
-
-            <p class="subtitle">
-                MECHATRONICS · ACOUSTICS · 3D PRINTING · CONTROLS
-            </p>
-
+            <p class="subtitle">MECHATRONICS · ACOUSTICS · 3D PRINTING · CONTROLS</p>
             <h1>Dynamic Sound Attenuator</h1>
-
-            <p class="project-description">
-                A mechatronics project that automatically positioned a sound
-                absorber at the quarter-wavelength location associated with the
-                dominant frequency in a room.
-            </p>
-
+            <p class="project-description">A mechatronics project that automatically positioned a sound absorber at the quarter-wavelength location associated with the dominant frequency in a room.</p>
         </section>
 
-
-        <img
-            src="Motor Housing.JPG"
-            alt="Dynamic sound attenuator mechatronics project"
-            class="project-hero-image"
-        >
-
+        <img src="sound-attenuator-drive.jpg" alt="Belt drive and limit switch assembly for the dynamic sound attenuator" class="project-hero-image">
 
         <section class="project-section">
-
             <h2>Project Overview</h2>
-
-            <p>
-                The goal of the project was to create a movable sound attenuator
-                that could adapt its position based on the frequency of an
-                incoming sound source.
-            </p>
-
-            <p>
-                A microphone measured the sound in the room and frequency
-                analysis was used to identify the dominant frequency. The system
-                then calculated the corresponding quarter-wavelength distance
-                from a wall and moved the absorber to that location.
-            </p>
-
+            <p>The goal of the project was to create a movable sound attenuator that could adapt its position based on the frequency of an incoming sound source.</p>
+            <p>A microphone measured the sound in the room and frequency analysis was used to identify the dominant frequency. The system then calculated the corresponding quarter-wavelength distance from a wall and moved the absorber to that location.</p>
         </section>
-
-
         <section class="project-section">
-
             <h2>Operating Principle</h2>
-
-            <p>
-                The design used the relationship between sound frequency and
-                wavelength. For a measured frequency, the wavelength was
-                determined from the speed of sound and the absorber target
-                position was set to one quarter of that wavelength from the wall.
-            </p>
-
-            <p>
-                This allowed the system to change its physical position as the
-                dominant frequency changed rather than remaining fixed at a
-                single location.
-            </p>
-
+            <p>The design used the relationship between sound frequency and wavelength. For a measured frequency, the wavelength was determined from the speed of sound and the absorber target position was set to one quarter of that wavelength from the wall.</p>
+            <p>This allowed the system to change its physical position as the dominant frequency changed rather than remaining fixed at a single location.</p>
         </section>
-
-
         <section class="project-section">
-
             <h2>Mechanical Design</h2>
+            <p>The absorber was mounted on a moving sled that traveled along a track supported by a frame. Several rail, cart, and motor-mount components were 3D printed to guide the cart and support the motion system.</p>
+            <p>A motor-driven belt mechanism moved the absorber along the track. The mechanical system had to remain stable while allowing the cart to move repeatedly to different target positions.</p>
 
-            <p>
-                The absorber was mounted on a moving sled that traveled along a
-                track supported by a wooden frame. Several rail and wheel
-                components were 3D printed to guide the cart and support the
-                motion system.
-            </p>
-
-            <p>
-                Two motors and a string-driven mechanism were used to move the
-                absorber along the track. The mechanical system had to remain
-                stable while allowing the cart to move repeatedly to different
-                target positions.
-            </p>
-
+            <img src="sound-attenuator-motor.jpg" alt="3D printed motor assembly for the dynamic sound attenuator" class="project-hero-image">
         </section>
-
-
         <section class="project-section">
-
             <h2>Sensing and Control</h2>
-
-            <p>
-                A microphone provided the acoustic input to the system. The
-                measured signal was processed using frequency analysis to
-                determine the strongest frequency present.
-            </p>
-
-            <p>
-                That frequency was converted into a required cart position, and
-                the motors were then commanded to move the attenuator to the
-                calculated distance along the track.
-            </p>
-
+            <p>A microphone provided the acoustic input to the system. The measured signal was processed using frequency analysis to determine the strongest frequency present.</p>
+            <p>That frequency was converted into a required cart position, and the motor was then commanded to move the attenuator to the calculated distance along the track.</p>
         </section>
-
-
         <section class="project-section">
-
             <h2>Prototyping and Testing</h2>
-
-            <p>
-                The project combined a physical prototype with an adjustable
-                acoustic input. A speaker could be used to generate different
-                frequencies so the system could be tested at multiple target
-                positions.
-            </p>
-
-            <p>
-                Testing focused on whether the system could identify a dominant
-                frequency, calculate the corresponding quarter-wavelength
-                position, and move the absorber to the required location.
-            </p>
-
+            <p>The project combined a physical prototype with an adjustable acoustic input. A speaker could be used to generate different frequencies so the system could be tested at multiple target positions.</p>
+            <p>Testing focused on whether the system could identify a dominant frequency, calculate the corresponding quarter-wavelength position, and move the absorber to the required location.</p>
         </section>
-
-
         <section class="project-section">
-
             <h2>Engineering Challenges</h2>
-
-            <p>
-                The project required the mechanical, electrical, and software
-                portions of the system to work together. Cart motion, changing
-                absorber mass, motor actuation, microphone data, and frequency
-                processing all affected the final system behavior.
-            </p>
-
-            <p>
-                Developing the prototype required iteration between the track
-                geometry, 3D-printed components, motor-driven motion system, and
-                the control logic used to determine the target position.
-            </p>
-
+            <p>The project required the mechanical, electrical, and software portions of the system to work together. Cart motion, motor actuation, microphone data, and frequency processing all affected the final system behavior.</p>
+            <p>Developing the prototype required iteration between the track geometry, 3D-printed components, motor-driven motion system, and the control logic used to determine the target position.</p>
         </section>
-
-
         <section class="project-section">
-
             <h2>Skills Used</h2>
-
             <ul>
                 <li>Mechanical design</li>
                 <li>Mechatronics</li>
@@ -187,11 +68,7 @@
                 <li>Sensor integration</li>
                 <li>System testing and design iteration</li>
             </ul>
-
         </section>
-
     </main>
-
 </body>
-
 </html>
