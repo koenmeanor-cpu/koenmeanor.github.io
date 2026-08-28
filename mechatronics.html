@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>High School Rocket Project | Engineering Portfolio</title>
+    <title>Dynamic Sound Attenuator | Koen Meanor</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,9 +13,7 @@
 <body>
 
     <nav>
-        <div class="logo">
-            <a href="index.html">Koen Meanor</a>
-        </div>
+        <a href="index.html" class="logo">Koen Meanor</a>
 
         <div class="nav-links">
             <a href="index.html#projects">Projects</a>
@@ -35,22 +33,23 @@
         <section class="project-header">
 
             <p class="subtitle">
-                ROCKETRY · CAD · PROTOTYPING · TESTING
+                MECHATRONICS · ACOUSTICS · 3D PRINTING · CONTROLS
             </p>
 
-            <h1>High School Rocket Project</h1>
+            <h1>Dynamic Sound Attenuator</h1>
 
             <p class="project-description">
-                A student engineering project focused on the design,
-                construction, and testing of a model rocket.
+                A mechatronics project that automatically positioned a sound
+                absorber at the quarter-wavelength location associated with the
+                dominant frequency in a room.
             </p>
 
         </section>
 
 
         <img
-            src="images/rocket-project.jpg"
-            alt="High school rocket project"
+            src="Motor Housing.JPG"
+            alt="Dynamic sound attenuator mechatronics project"
             class="project-hero-image"
         >
 
@@ -60,10 +59,16 @@
             <h2>Project Overview</h2>
 
             <p>
-                This project involved designing and building a model rocket
-                as part of a high school engineering project. The work
-                combined mechanical design, fabrication, component selection,
-                and testing to produce a functional launch vehicle.
+                The goal of the project was to create a movable sound attenuator
+                that could adapt its position based on the frequency of an
+                incoming sound source.
+            </p>
+
+            <p>
+                A microphone measured the sound in the room and frequency
+                analysis was used to identify the dominant frequency. The system
+                then calculated the corresponding quarter-wavelength distance
+                from a wall and moved the absorber to that location.
             </p>
 
         </section>
@@ -71,33 +76,19 @@
 
         <section class="project-section">
 
-            <h2>Design Goals</h2>
-
-            <ul>
-                <li>Create a stable and functional rocket design</li>
-                <li>Keep the structure lightweight while maintaining sufficient strength</li>
-                <li>Design components that could be manufactured using available tools</li>
-                <li>Integrate the motor, body, fins, and recovery system into a complete assembly</li>
-                <li>Validate the design through launch testing</li>
-            </ul>
-
-        </section>
-
-
-        <section class="project-section">
-
-            <h2>Design Process</h2>
+            <h2>Operating Principle</h2>
 
             <p>
-                The rocket was developed through a series of design decisions
-                involving overall geometry, fin placement, component packaging,
-                material selection, and manufacturability.
+                The design used the relationship between sound frequency and
+                wavelength. For a measured frequency, the wavelength was
+                determined from the speed of sound and the absorber target
+                position was set to one quarter of that wavelength from the wall.
             </p>
 
             <p>
-                CAD models and drawings were used to define the geometry
-                before fabrication. The design was adjusted as needed based
-                on fit, assembly, and practical manufacturing constraints.
+                This allowed the system to change its physical position as the
+                dominant frequency changed rather than remaining fixed at a
+                single location.
             </p>
 
         </section>
@@ -105,36 +96,20 @@
 
         <section class="project-section">
 
-            <h2>Manufacturing and Assembly</h2>
+            <h2>Mechanical Design</h2>
 
             <p>
-                Components were fabricated and assembled into the final
-                rocket structure. Particular attention was given to alignment,
-                fit between components, and maintaining a lightweight build.
+                The absorber was mounted on a moving sled that traveled along a
+                track supported by a wooden frame. Several rail and wheel
+                components were 3D printed to guide the cart and support the
+                motion system.
             </p>
 
             <p>
-                Add photos here showing individual components, assembly,
-                or any manufacturing steps that were especially important.
-            </p>
-
-        </section>
-
-
-        <section class="project-section">
-
-            <h2>Testing</h2>
-
-            <p>
-                The completed rocket was tested through launch trials.
-                These tests provided feedback on stability, structural
-                performance, and the effectiveness of the overall design.
-            </p>
-
-            <p>
-                This section is a good place to include launch photos,
-                video stills, measured altitude, flight data, or any issues
-                encountered during testing.
+                Two motors and a string-driven mechanism were used to move the
+                absorber along the track. The mechanical system had to remain
+                stable while allowing the cart to move repeatedly to different
+                target positions.
             </p>
 
         </section>
@@ -142,17 +117,58 @@
 
         <section class="project-section">
 
-            <h2>Outcome</h2>
+            <h2>Sensing and Control</h2>
 
             <p>
-                The project provided early experience with the full engineering
-                process, from initial design and CAD through manufacturing,
-                assembly, and real-world testing.
+                A microphone provided the acoustic input to the system. The
+                measured signal was processed using frequency analysis to
+                determine the strongest frequency present.
             </p>
 
             <p>
-                It also introduced the practical compromises involved in
-                turning a design into a working physical product.
+                That frequency was converted into a required cart position, and
+                the motors were then commanded to move the attenuator to the
+                calculated distance along the track.
+            </p>
+
+        </section>
+
+
+        <section class="project-section">
+
+            <h2>Prototyping and Testing</h2>
+
+            <p>
+                The project combined a physical prototype with an adjustable
+                acoustic input. A speaker could be used to generate different
+                frequencies so the system could be tested at multiple target
+                positions.
+            </p>
+
+            <p>
+                Testing focused on whether the system could identify a dominant
+                frequency, calculate the corresponding quarter-wavelength
+                position, and move the absorber to the required location.
+            </p>
+
+        </section>
+
+
+        <section class="project-section">
+
+            <h2>Engineering Challenges</h2>
+
+            <p>
+                The project required the mechanical, electrical, and software
+                portions of the system to work together. Cart motion, changing
+                absorber mass, motor actuation, microphone data, and frequency
+                processing all affected the final system behavior.
+            </p>
+
+            <p>
+                Developing the prototype required iteration between the track
+                geometry, 3D-printed components, motor-driven motion system, and
+                the control logic used to determine the target position.
             </p>
 
         </section>
@@ -164,11 +180,12 @@
 
             <ul>
                 <li>Mechanical design</li>
-                <li>CAD modeling</li>
-                <li>Prototyping</li>
-                <li>Manufacturing and assembly</li>
-                <li>Design iteration</li>
-                <li>Testing and evaluation</li>
+                <li>Mechatronics</li>
+                <li>3D printing and prototyping</li>
+                <li>Acoustic frequency analysis</li>
+                <li>Motor control</li>
+                <li>Sensor integration</li>
+                <li>System testing and design iteration</li>
             </ul>
 
         </section>
